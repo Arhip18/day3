@@ -1,0 +1,51 @@
+﻿<Window x:Class="PraktikaLitvinov.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PraktikaLitvinov"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="650" Width="1200" Background="LightGoldenrodYellow" Closing="Window_Closing"  WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="/Images/login.png" Grid.Column="1" Grid.Row="1" />
+        <Image Source="/Images/email.png" Grid.Column="1" Grid.Row="3" />
+        <Image Source="/Images/password.png" Grid.Column="1" Grid.Row="5" />
+        <Image Source="/Images/repeat.png" Grid.Column="1" Grid.Row="7" />
+        <TextBlock Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2"  FontSize="20"  Name="LoginErrorBox" />
+        <TextBlock Grid.Row="3"  Grid.Column="5" Grid.ColumnSpan="2"  FontSize="20"  Name="EmailErrorBox"/>
+        <TextBlock Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2"  FontSize="20"  Name="PasswordErrorBox" />
+        <TextBox Background="White" Grid.Column="2" Grid.Row="1" FontSize="20" Grid.ColumnSpan="3"  Name="lg" TextChanged="lg_TextChanged"></TextBox>
+        <TextBox Background="White" Grid.Column="2" Grid.Row="3" FontSize="20" Grid.ColumnSpan="3"  Name="em"/>
+        <TextBox Background="White" Grid.Column="2" Grid.Row="5" FontSize="20" Grid.ColumnSpan="3"  Name="ps1" TextChanged="ps1_TextChanged"></TextBox>
+        <TextBox Background="White" Grid.Column="2" Grid.Row="7" FontSize="20" Grid.ColumnSpan="3"  Name="ps2" ></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left"  Grid.RowSpan="2" Text="Логин" FontSize="35" TextAlignment="Center"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Text="Электронная почта" FontSize="30"  TextAlignment="Center"/>
+        <TextBlock Grid.Column="2" Grid.Row="4" Text="Пароль" FontSize="38" TextAlignment="Center" Margin="0,10,0,0"/>
+        <TextBlock Grid.Column="2" Grid.Row="6" HorizontalAlignment="Left" Grid.ColumnSpan="3"  Text="Подтвердите пароль" FontSize="30"  TextAlignment="Center"/>
+        <Button Content="Зарегистрироваться" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="9" Background="LightGreen" FontSize="20"  Click="Button_Click_1"/>
+        <Button Content="Зарегистрированы?" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="8"  FontSize="20" Background="CadetBlue"  Click="Button_Click"/>
+    </Grid>
+
+</Window>
